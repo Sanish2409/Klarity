@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klarity.Android", "Klarity\Klarity.Android\Klarity.Android.csproj", "{18BD036A-9CCE-47FA-8885-F6D94E51B84D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klarity", "Klarity\Klarity\Klarity.csproj", "{C5AE9288-D632-4D01-B004-7DA77E9D17D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18BD036A-9CCE-47FA-8885-F6D94E51B84D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18BD036A-9CCE-47FA-8885-F6D94E51B84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18BD036A-9CCE-47FA-8885-F6D94E51B84D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{18BD036A-9CCE-47FA-8885-F6D94E51B84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18BD036A-9CCE-47FA-8885-F6D94E51B84D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18BD036A-9CCE-47FA-8885-F6D94E51B84D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C5AE9288-D632-4D01-B004-7DA77E9D17D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AE9288-D632-4D01-B004-7DA77E9D17D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AE9288-D632-4D01-B004-7DA77E9D17D8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C5AE9288-D632-4D01-B004-7DA77E9D17D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AE9288-D632-4D01-B004-7DA77E9D17D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5AE9288-D632-4D01-B004-7DA77E9D17D8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18D03A1B-1846-4FA3-8D17-BD357D21E241}
+	EndGlobalSection
+EndGlobal
