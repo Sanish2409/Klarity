@@ -1,0 +1,169 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Klarity.AccountPage"
+             Title="Account"
+             BackgroundColor="#f5f5f5">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <!-- Profile Section -->
+            <Frame BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="15">
+                
+                <StackLayout>
+                    <Image Source="monkey.jpg" HeightRequest="100" Aspect="AspectFill" HorizontalOptions="Center"></Image>
+                    <Label Text="Danny" FontSize="Medium" FontAttributes="Bold" TextColor="#333333" HorizontalOptions="Center"/>
+                    <Label Text="Danny231@gmail.com" FontSize="Small" TextColor="#555555" HorizontalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+            <Label Text="Your Orders" 
+                   FontSize="Large" 
+                   FontAttributes="Bold" 
+                   TextColor="#333" />
+            <!-- Small Buttons Section -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30" Margin="0,10,0,0">
+          
+                <!-- unpaid Button -->
+                <StackLayout >
+                    <Image Source="unpaid.png" HeightRequest="23" />
+                    <Label Text="Unpaid" TextColor="Black" FontSize="12"  HorizontalOptions="Center" />
+                </StackLayout>
+
+                <!-- Processing Button -->
+                <StackLayout>
+                    <Image Source="processing.png" HeightRequest="23" />
+                    <Label Text="Processing" TextColor="Black" FontSize="12" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <!-- Shipped Button -->
+                <StackLayout>
+                    <Image Source="shipped.png" HeightRequest="23" />
+                    <Label Text="Shipped" TextColor="Black" FontSize="12" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <!-- Review Button -->
+                <StackLayout>
+                    <Image Source="review.png" HeightRequest="23" />
+                    <Label Text="Review" TextColor="Black" FontSize="12" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <!-- Returns Button -->
+                <StackLayout>
+                    <Image Source="return1.png" HeightRequest="23" />
+                    <Label Text="Returns" TextColor="Black" FontSize="12" HorizontalOptions="Center" />
+                </StackLayout>
+                
+            </StackLayout >
+            <Grid Padding="7" HeightRequest="50" BackgroundColor="#FFFFFF">
+                <Button Text="My Cart"   Command="{Binding GoToMyCartCommand}" BackgroundColor="Transparent" FontSize="Small" VerticalOptions="Start" />
+                <Image Source="cart.png " WidthRequest="20" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Center" />
+            </Grid>
+            
+
+            <!-- Options List -->
+            
+            <Label Text="Settings" FontSize="Large" FontAttributes="Bold" TextColor="#333333"/>
+
+
+
+            <StackLayout BackgroundColor="#FFFFFF" Padding="10" >
+                <!-- contact -->
+                <Grid Padding="10">
+                    <Label Text="Favourite Stores"  VerticalOptions="Center" />
+                    <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                </Grid>
+                <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                <!-- Settings Options -->
+                <StackLayout>
+                    <!-- Each Setting Row Template -->
+                    <Grid Padding="10">
+                        <Label Text="Address Book" VerticalOptions="Center" />
+                        <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <Grid Padding="10">
+                        <Label Text="Manage My Account" VerticalOptions="Center" />
+                        <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <Grid Padding="10">
+                        <Label Text="Location" VerticalOptions="Center" />
+                        <Label Text="CA >" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <!-- Other options -->
+                    <Grid Padding="10">
+                        <Label Text="Language" VerticalOptions="Center" />
+                        <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <Grid Padding="10">
+                        <Label Text="Currency" VerticalOptions="Center" />
+                        <Label Text="CAD >" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <!-- Additional Options -->
+                    <Grid Padding="10">
+                        <Label Text="Contact Preferences" VerticalOptions="Center" />
+                        <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <Grid Padding="10">
+                        <Label Text="Clear Cache" VerticalOptions="Center" />
+                        <Label Text="277.9M >" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <!-- Privacy & Cookie Policy -->
+                    <Grid Padding="10">
+                        <Label Text="Privacy and Cookie Policy" VerticalOptions="Center" />
+                        <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <Grid Padding="10">
+                        <Label Text="Terms and Conditions" VerticalOptions="Center" />
+                        <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <Grid Padding="10">
+                        <Label Text="Rating and Feedback" VerticalOptions="Center" />
+                        <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <Grid Padding="10">
+                        <Label Text="Connect to Us" VerticalOptions="Center" />
+                        <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <Grid Padding="10">
+                        <Label Text="Ad Choice" VerticalOptions="Center" />
+                        <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" />
+
+                    <Grid Padding="10">
+                        <Label Text="About Klarity" VerticalOptions="Center" />
+                        <Label Text=">" FontSize="Medium" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Sign Out Button -->
+            <Button Text="Sign Out" Clicked="OnSignOutClicked" BackgroundColor="Red" TextColor="White" CornerRadius="10" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

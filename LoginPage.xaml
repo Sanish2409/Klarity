@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Klarity.LoginPage"
+             BackgroundColor="#f5f5f5">
+    <ContentPage.Content>
+        <StackLayout Padding="30" VerticalOptions="CenterAndExpand" Spacing="20">
+
+            <!-- App Title -->
+            <Label Text="Welcome to Klarity"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   HorizontalOptions="Center" />
+
+            <!-- Username Entry -->
+            <Entry x:Name="usernameEntry"
+                   Placeholder="Username"
+                   BackgroundColor="White"
+                   TextColor="#333"
+                   PlaceholderColor="#888"
+                   Margin="0,10,0,0"
+                   HeightRequest="45" />
+
+            <!-- Password Entry -->
+            <Entry x:Name="passwordEntry"
+                   Placeholder="Password"
+                   IsPassword="True"
+                   BackgroundColor="White"
+                   TextColor="#333"
+                   PlaceholderColor="#888"
+                   Margin="0,10,0,0"
+                   HeightRequest="45" />
+
+            <!-- Sign In Button -->
+            <Button Text="Sign In"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="8"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    Clicked="OnSignInClicked" />
+
+            <!-- Sign Up Button -->
+            <Button Text="Sign Up"
+                    BackgroundColor="#FF9800"
+                    TextColor="White"
+                    CornerRadius="8"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    Clicked="OnSignUpClicked"
+                    Margin="0,10,0,0" />
+
+            <!-- Or divider -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                <Label Text="OR" TextColor="#333" FontSize="14" HorizontalOptions="Center" Padding="10,0" />
+
+            </StackLayout>
+
+            <!-- Social Login Buttons -->
+            <Button Text="Continue with Facebook"
+                    BackgroundColor="#3b5998"
+                    TextColor="White"
+                    CornerRadius="8"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    Margin="0,10,0,0" />
+
+            <Button Text="Continue with Google"
+                    BackgroundColor="#DB4437"
+                    TextColor="White"
+                    CornerRadius="8"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    Margin="0,10,0,0" />
+
+            <Button Text="Continue with Twitter"
+                    BackgroundColor="#1DA1F2"
+                    TextColor="White"
+                    CornerRadius="8"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    Margin="0,10,0,0" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

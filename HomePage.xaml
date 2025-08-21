@@ -1,0 +1,212 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Klarity.HomePage"
+             BackgroundColor="#f5f5f5"
+             Title="Home">
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="20">
+
+            <Label Text="Klarity.com"
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               Margin="0,0,0,0"/>
+
+            <!-- Offer Images Carousel -->
+            <CarouselView HeightRequest="100" x:Name="imageCarousel">
+                <CarouselView.ItemsSource>
+                    <x:Array Type="{x:Type ImageSource}">
+                        <ImageSource>offer2.png</ImageSource>
+                        <ImageSource>offer3.png</ImageSource>
+                        <ImageSource>offer4.png</ImageSource>
+                    </x:Array>
+                </CarouselView.ItemsSource>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding .}" />
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <!-- Small Buttons Section -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="14" Margin="0,10,0,0">
+
+                <!-- Voucher Button -->
+                <StackLayout>
+                    <Image Source="voucher.jpg" HeightRequest="50" />
+                    <Label Text="Vouchers" TextColor="Black" FontSize="12" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <!-- Flash Sale Button -->
+                <StackLayout>
+                    <Image Source="fsale.jpg" HeightRequest="50" />
+                    <Label Text="Flash Sale" TextColor="Black" FontSize="12" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <!-- Black Friday Sale Button -->
+                <StackLayout>
+                    <Image Source="bf.jpg" HeightRequest="50" />
+                    <Label Text="Black-Fri Sale" TextColor="Black" FontSize="12" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <!-- 11:11 Button -->
+                <StackLayout>
+                    <Image Source="eleven.jpg" HeightRequest="50" />
+                    <Label Text="11:11" TextColor="Black" FontSize="12" HorizontalOptions="Center" />
+                </StackLayout>
+
+                <!-- Reward Points Button -->
+                <StackLayout>
+                    <Image Source="rewards.jpg" HeightRequest="50" />
+                    <Label Text="Reward Points" TextColor="Black" FontSize="12" HorizontalOptions="Center" />
+                </StackLayout>
+
+            </StackLayout>
+            
+            <!-- Amazon Deals Section -->
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="Amazon Deals" 
+                           FontSize="Large" 
+                           FontAttributes="Bold" 
+                           TextColor="#333" />
+                    <CollectionView ItemsSource="{Binding AmazonCategories}" 
+                                    HorizontalScrollBarVisibility="Always"
+                                    HeightRequest="150" 
+                                    ItemsLayout="HorizontalList">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="5" WidthRequest="100">
+                                    <Frame BackgroundColor="#f5f5f5" 
+                                           CornerRadius="5" 
+                                           Padding="10">
+                                        <StackLayout>
+                                            <Image Source="{Binding ImageSource}" 
+                                                   WidthRequest="80" 
+                                                   HeightRequest="80" 
+                                                   Aspect="AspectFill" />
+                                            <Label Text="{Binding Name}" 
+                                                   FontSize="Small" 
+                                                   HorizontalOptions="Center" 
+                                                   VerticalOptions="End" />
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <Button Text="See More" FontSize="12" BackgroundColor="Transparent" HorizontalOptions="End"  Padding="5" HeightRequest="37"  Clicked="OnSeeMoreAmazonClicked" />
+                </StackLayout>
+            </Frame>
+
+            <!-- eBay Deals Section -->
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="eBay Deals" 
+                           FontSize="Large" 
+                           FontAttributes="Bold" 
+                           TextColor="#333" />
+                    <CollectionView ItemsSource="{Binding EbayCategories}" 
+                                    HorizontalScrollBarVisibility="Never"
+                                    HeightRequest="150" 
+                                    ItemsLayout="HorizontalList">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="5" WidthRequest="100">
+                                    <Frame BackgroundColor="#f5f5f5" 
+                                           CornerRadius="5" 
+                                           Padding="10">
+                                        <StackLayout>
+                                            <Image Source="{Binding ImageSource}" 
+                                                   WidthRequest="80" 
+                                                   HeightRequest="80" 
+                                                   Aspect="AspectFill" />
+                                            <Label Text="{Binding Name}" 
+                                                   FontSize="Small" 
+                                                   HorizontalOptions="Center" 
+                                                   VerticalOptions="End" />
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <Button Text="See More >" FontSize="12" BackgroundColor="Transparent" HorizontalOptions="End" IsEnabled="True"  Padding="5" HeightRequest="37"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- BestBuy Deals Section -->
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="BestBuy Deals" 
+                           FontSize="Large" 
+                           FontAttributes="Bold" 
+                           TextColor="#333" />
+                    <CollectionView ItemsSource="{Binding BestBuyCategories}" 
+                                    HorizontalScrollBarVisibility="Never"
+                                    HeightRequest="150" 
+                                    ItemsLayout="HorizontalList">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="5" WidthRequest="100">
+                                    <Frame BackgroundColor="#f5f5f5" 
+                                           CornerRadius="5" 
+                                           Padding="10">
+                                        <StackLayout>
+                                            <Image Source="{Binding ImageSource}" 
+                                                   WidthRequest="80" 
+                                                   HeightRequest="80" 
+                                                   Aspect="AspectFill" />
+                                            <Label Text="{Binding Name}" 
+                                                   FontSize="Small" 
+                                                   HorizontalOptions="Center" 
+                                                   VerticalOptions="End" />
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <Button Text="See More >" FontSize="12" BackgroundColor="Transparent" HorizontalOptions="End" IsEnabled="True"  Padding="5" HeightRequest="37"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Shein Deals Section -->
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="Shein Deals" 
+                           FontSize="Large" 
+                           FontAttributes="Bold" 
+                           TextColor="#333" />
+                    <CollectionView ItemsSource="{Binding SheinCategories}" 
+                                    HorizontalScrollBarVisibility="Never"
+                                    HeightRequest="150" 
+                                    ItemsLayout="HorizontalList">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="5" WidthRequest="100">
+                                    <Frame BackgroundColor="#f5f5f5" 
+                                           CornerRadius="5" 
+                                           Padding="10">
+                                        <StackLayout>
+                                            <Image Source="{Binding ImageSource}" 
+                                                   WidthRequest="80" 
+                                                   HeightRequest="80" 
+                                                   Aspect="AspectFill" />
+                                            <Label Text="{Binding Name}" 
+                                                   FontSize="Small" 
+                                                   HorizontalOptions="Center" 
+                                                   VerticalOptions="End" />
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <Button Text="See More >" FontSize="12" BackgroundColor="Transparent" HorizontalOptions="End" IsEnabled="True"  Padding="5" HeightRequest="37"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

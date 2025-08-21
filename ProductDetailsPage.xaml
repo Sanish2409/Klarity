@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Klarity.ProductDetailsPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Amazon Deals"
+                   FontSize="24"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+            
+            <CollectionView ItemsSource="{Binding AmazonCategories}" 
+                VerticalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <!-- Set Grid layout with 3 columns -->
+                    <GridItemsLayout Orientation="Vertical" 
+                         Span="3" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="5" 
+                   Margin="5" 
+                   BackgroundColor="White"
+                   CornerRadius="8">
+                            <StackLayout>
+                                <!-- Product Image -->
+                                <Image Source="{Binding ImageSource}" 
+                           HeightRequest="100"
+                           Aspect="AspectFill" />
+
+                                <!-- Product Name -->
+                                <Label Text="{Binding Name}" 
+                           FontSize="14" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center" 
+                           LineBreakMode="TailTruncation" />
+
+             
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label Text="Hot Deals"
+       FontSize="24"
+       TextColor="Black"
+       HorizontalOptions="Center" />
+
+            <CollectionView ItemsSource="{Binding Products}" 
+     VerticalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <!-- Set Grid layout with 3 columns -->
+                    <GridItemsLayout Orientation="Vertical" 
+              Span="3" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="5" 
+        Margin="5" 
+        BackgroundColor="White"
+        CornerRadius="8">
+                            <StackLayout >
+                                <!-- Product Image -->
+                                <Image Source="{Binding ImageUrl}" 
+                HeightRequest="100"
+                Aspect="AspectFill" />
+
+                                <!-- Product Name -->
+                                <Label Text="{Binding Name}" 
+                FontSize="14" 
+                FontAttributes="Bold"
+                HorizontalOptions="Center" 
+                LineBreakMode="TailTruncation" />
+
+                                <!-- Product Price -->
+                                <Label Text="{Binding Price}" 
+                FontSize="12"
+                TextColor="DarkGray" 
+                HorizontalOptions="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
